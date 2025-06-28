@@ -1,4 +1,4 @@
-import './global.css';
+import './reset.css';
 
 export const metadata = {
   title: 'Welcome to app-web',
