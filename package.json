@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "app-web:start": "pnpm nx serve app-web",
-    "backend:start": "cd app-backend && source venv/bin/activate && uvicorn main:app --reload"
+    "frontend:start": "pnpm nx serve app-web --turbopack",
+    "backend:start": "cd app-backend && source venv/bin/activate && PYTHONPATH=src uvicorn app.main:app --reload"
   },
   "private": true,
   "devDependencies": {

@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -7,7 +9,9 @@ export default function Home() {
     fetch('http://127.0.0.1:8000/api/message')
       .then((res) => res.json())
       .then((data) => setMessage(data.message))
-      .catch(() => setMessage('Could not fetch message'));
+      .catch((error) =>
+        setMessage('Could not fetch message: ' + error.message)
+      );
   }, []);
 
   return (
