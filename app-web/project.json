@@ -29,7 +29,7 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["app-web/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["app-web/src/**/*.{ts,tsx,js,jsx}"]
       }
     }
   }

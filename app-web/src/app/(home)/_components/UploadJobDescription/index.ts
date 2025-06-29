@@ -1,1 +1,1 @@
-export { default as UploadResume } from './UploadResume';
+export { default as uploadJobDescriptionAction } from './UploadJobDescription';
