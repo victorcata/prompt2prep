@@ -13,6 +13,6 @@ class ResumeRequest(BaseModel):
 
 @router.post('/api/upload-resume')
 def upload_resume(data: ResumeRequest):
-    session_id = data.session_id or create_session()
+    session_id = data.session_id
     save_resume(session_id, data.resume)
     return {'status': 'received', 'session_id': session_id}
