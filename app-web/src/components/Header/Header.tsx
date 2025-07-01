@@ -4,11 +4,14 @@ import { Paths } from '../../config/paths';
 
 function Header() {
   return (
-    <nav className={styles.header}>
-      <div className={styles.logo}>
-        <Link href={Paths.Home}>Prompt2Prep</Link>
-      </div>
+    <nav className={styles.main}>
       <ul className={styles.links}>
+        <li>
+          <Link href={Paths.Home}>Resume</Link>
+        </li>
+        <li>
+          <Link href={Paths.JobDescription}>Job Description</Link>
+        </li>
         <li>
           <Link href={Paths.Questions}>Questions</Link>
         </li>

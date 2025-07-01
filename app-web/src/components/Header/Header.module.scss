@@ -1,0 +1,9 @@
+.main {
+  padding-bottom: var(--spacing-xbig);
+
+  .links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
+  }
+}
