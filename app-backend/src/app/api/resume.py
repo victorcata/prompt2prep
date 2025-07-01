@@ -8,7 +8,7 @@ router = APIRouter()
 
 class ResumeRequest(BaseModel):
     resume: str
-    session_id: str = None
+    session_id: str
 
 
 @router.post('/api/upload-resume')

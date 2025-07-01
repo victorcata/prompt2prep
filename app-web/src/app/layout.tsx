@@ -1,6 +1,13 @@
+import { Roboto } from 'next/font/google';
 import Providers from '../providers';
-import './styles/reset.scss';
+import '../styles/index.scss';
 import styles from './layout.module.scss';
+import { Header } from '../components/Header';
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+});
 
 export const metadata = {
   title: 'Prompt2Prep - Your AI-Powered Interview Preparation Assistant',
@@ -14,8 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={roboto.className}>
       <body className={styles.main}>
+        <Header />
         <Providers>{children}</Providers>
       </body>
     </html>

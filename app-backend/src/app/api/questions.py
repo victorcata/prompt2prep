@@ -13,9 +13,9 @@ class QuestionRequest(BaseModel):
 @router.post('/api/generate-questions')
 def generate_questions(data: QuestionRequest):
     session_id = data.session_id
-    user_data = get_data(session_id)
-    resume = user_data.get('resume')
-    job_description = user_data.get('job_description')
+    resume = get_data(session_id).get('resume', 'No resume found')
+    job_description = get_data(session_id).get(
+        'job_description', 'No resume found')
 
     if not resume or not job_description:
         raise HTTPException(
