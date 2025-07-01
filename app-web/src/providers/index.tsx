@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import SessionProvider from './SessionProvider';
+import SessionProvider from './SessionProvider/SessionProvider';
 
 function Providers({ children }: { children: ReactNode }) {
   return <SessionProvider>{children}</SessionProvider>;

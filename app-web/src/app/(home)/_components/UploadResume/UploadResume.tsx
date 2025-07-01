@@ -1,11 +1,17 @@
 'use client';
 
 import { uploadResumeAction } from './UploadResume.action';
+import styles from './UploadResume.module.scss';
 
 function UploadResume() {
   return (
-    <form action={uploadResumeAction} method="post">
+    <form className={styles.main} action={uploadResumeAction} method="post">
       {/* <input type="file" accept=".pdf,.doc,.docx" /> */}
+      <input
+        type="hidden"
+        name="session_id"
+        value={localStorage.getItem('session_id') || ''}
+      />
       <textarea
         cols={50}
         name="resume"

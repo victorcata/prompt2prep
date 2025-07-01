@@ -1,11 +1,20 @@
 'use client';
 
 import { uploadJobDescriptionAction } from './UploadJobDescription.action';
+import styles from './UploadJobDescription.module.scss';
 
 function UploadJobDescription() {
   return (
-    <form action={uploadJobDescriptionAction} method="post">
-      {/* <input type="file" accept=".pdf,.doc,.docx" /> */}
+    <form
+      className={styles.main}
+      action={uploadJobDescriptionAction}
+      method="post"
+    >
+      <input
+        type="hidden"
+        name="session_id"
+        value={localStorage.getItem('session_id') || ''}
+      />
       <textarea
         cols={50}
         name="job_description"

@@ -1,5 +1,6 @@
 import Providers from '../providers';
 import './styles/reset.scss';
+import styles from './layout.module.scss';
 
 export const metadata = {
   title: 'Prompt2Prep - Your AI-Powered Interview Preparation Assistant',
@@ -14,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={styles.main}>
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -2,7 +2,7 @@
 
 import { createContext, ReactNode, useEffect, useState } from 'react';
 
-const SessionContext = createContext<string | null>(null);
+export const SessionContext = createContext<string | null>(null);
 
 function SessionProvider({ children }: { children: ReactNode }) {
   const [sessionId, setSessionId] = useState<string | null>(null);
